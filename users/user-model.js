@@ -7,15 +7,18 @@ module.exports = {
     findById
 }
 
-function add(){
-
+async function add(user){
+    const [id] = await("user").insert(user)
+    return findById(id)
 }
 function find(){
-
+    return db("user").select("id","username","password")
 }
-function findBy(){
-
+function findBy(filter){
+    return db("user").where(filter)
 }
-function findById(){
-    
+function findById(id){
+    return db("user")
+        .where({ id })
+        .first()
 }
