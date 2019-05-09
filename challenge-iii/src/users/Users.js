@@ -24,9 +24,9 @@ class Users extends React.Component{
         return(
             <div>
                 <h3>List of users</h3>
-                {this.state.users.map(person=>(
+                {this.state.users? (this.state.users.map(person=>(
                     <li key={person.id}>{person.username}</li>
-                ))}
+                ))): <h2>there are no users</h2>}
             </div>
         )
     }

@@ -8,6 +8,11 @@ import './App.css';
 
 
 function App (props) {
+
+  function logout(){
+    localStorage.removeItem("jwt")
+    props.history.push("/login")
+  }
     return (
       <div>
       Welcome to the React App
@@ -15,6 +20,7 @@ function App (props) {
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/users">Users</NavLink>
       </header>
+      <button type="button" onClick={logout}>Log-Out</button>
       <main>
         <Route path="/login" component={Login}/>
         <Route path="/users" component={Users}/>
