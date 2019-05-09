@@ -8,29 +8,20 @@ import './App.css';
 
 const URL = "http://localhost:5000"
 
-class App extends React.Component {
-  constructor(){
-    super();
-    this.state={
-      users:[]
-    }
-  }
-
-  componentDidMount(){
-    axios
-      .get(`URL`)
-  }
-
-
-  render(){
+function App (props) {
     return (
-      <div className="App">
+      <div>
       Welcome to the React App
-      <Login />
-      <Users />
+      <header>
+        <NavLink>Login</NavLink>
+        <NavLink>Users</NavLink>
+      </header>
+      <main>
+        <Route path="/login" component={Login}/>
+        <Route path="users" component={Users}/>
+      </main>
       </div>
     )
-  }
 }
 
-export default App;
+export default withRouter(App);
