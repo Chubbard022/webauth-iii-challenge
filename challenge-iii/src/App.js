@@ -13,12 +13,12 @@ function App (props) {
       <div>
       Welcome to the React App
       <header>
-        <NavLink>Login</NavLink>
-        <NavLink>Users</NavLink>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/users">Users</NavLink>
       </header>
       <main>
         <Route path="/login" component={Login}/>
-        <Route path="users" component={Users}/>
+        <Route path="/users" component={Users}/>
       </main>
       </div>
     )
