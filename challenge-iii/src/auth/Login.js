@@ -36,7 +36,7 @@ class Login extends React.Component {
                         id="username"
                         onChange={this.handleChange}
                         value={this.state.username}
-                    />xs
+                    />
 
                     <label htmlFor="password" />
                     <input

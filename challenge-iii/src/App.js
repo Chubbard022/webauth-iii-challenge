@@ -6,7 +6,6 @@ import Login from "./auth/Login"
 import Users from "./users/Users"
 import './App.css';
 
-const URL = "http://localhost:5000"
 
 function App (props) {
     return (
